@@ -135,6 +135,7 @@ def wrapper(directory, **kwargs):
         dose_evaluation, x_evaluation, y_evaluation, z_evaluation, **kwargs)
     valid_gamma = gamma[~np.isnan(gamma)]
     print (('PassRate: ', np.sum(valid_gamma <= 1) / float(len(valid_gamma)) * 100))
+    return gamma
 
 
 def compute_gamma(dose_reference, x_reference, y_reference, z_reference,
